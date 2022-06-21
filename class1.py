@@ -11,7 +11,14 @@ class Person:
 #2) 인스턴스 생성
 p1 = Person()
 p2 = Person()
+
 #3) 메서드 호출
 p1.print()
 p2.name = "전우치"
 p2.print()
+
+#4) 
+Person.title = "New title"
+print(p1.title)
+print(p2.title)
+print(Person.title)
