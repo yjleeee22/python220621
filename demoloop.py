@@ -86,6 +86,6 @@ for item in iterL:
 
 print("---람다함수---")
 
-iterL = filter(lambda i:i>20,lst)
+iterL = filter(lambda x:x>20,lst)
 for item in iterL:
     print(item)
