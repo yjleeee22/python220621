@@ -17,7 +17,7 @@ p1.print()
 p2.name = "전우치"
 p2.print()
 
-#4) 
+#4) 런타임시에 변수 추가
 Person.title = "New title"
 print(p1.title)
 print(p2.title)
