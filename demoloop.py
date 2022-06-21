@@ -89,3 +89,4 @@ print("---람다함수---")
 iterL = filter(lambda x:x>20,lst)
 for item in iterL:
     print(item)
+
