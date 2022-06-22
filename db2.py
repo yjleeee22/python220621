@@ -1,12 +1,14 @@
-# db1.py
+# db2.py
 import sqlite3
 
-# 연결 객체를 리턴받기(일단 메모리에서 연습)
-con = sqlite3.connect(":memory:")
+# 연결 객체를 리턴받기(파일에 영구적으로 저장)
+con = sqlite3.connect("c:\\work\\sample.db")
 # 커서 객체를 리턴받기
 cur = con.cursor()
 # 테이블(스키마)를 생성
 cur.execute("create table PhoneBook (Name text, PhoneNum text);")
+# 두번 수행하면 이미있는 테이블이라고 오류가 뜸
+#   sqlite3.OperationalError: table PhoneBook already exists
 # 1건 입력
 cur.execute("insert into PhoneBook values ('Frederick','010-222');")
 # 입력 파라메터 처리
@@ -20,17 +22,9 @@ cur.executemany("insert into PhoneBook values (?, ?);",datalist)
 
 # 검색
 cur.execute("select * from PhoneBook;")
-
-# 검색 메서드 사용
-print("---fetchone()---")
-print(cur.fetchone())
-print("---fetchmany(2)---") #바깥은 리스트, 안은 튜플
-print(cur.fetchmany(2))
-print("---fetchall()---") #이미 앞에 1+2건을 보여줘서 버퍼에 남은건 1건뿐
 print(cur.fetchall())
-cur.execute("select * from PhoneBook;") #다시 검색하면
-print(cur.fetchall()) #4건 다 나옴
 
-# for row in cur:
-#     print(row[0] + " , " + row[1])
+#작업을 정상적으로 완료
+con.commit()
+
 
