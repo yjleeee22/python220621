@@ -1,0 +1,10 @@
+hRst = 2 error 100: error 발생
+
+RegOpenKey(Software\AHNLAB\APC2\Policy Agent) : 0 error 100: error 발생
+
+hRst = 2 error 100: error 발생
+
+lpParam : -1, 0, 999, 업데이트가 완료되었습니다. (2015.12.15.00) error 100: error 발생
+
+lpParam : -1, 0, 999, 업데이트가 완료되었습니다. (2016.07.19.01) error 100: error 발생
+
