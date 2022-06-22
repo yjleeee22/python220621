@@ -1,5 +1,6 @@
 # DemoRandom.py
 import random
+from unittest import result
 
 print(random.random())
 print(random.random())
@@ -28,3 +29,8 @@ from os import *
 print(getcwd()) #current working directory
 print(name) #운영체제 이름
 system("notepad.exe") #실행하라
+
+#파일, 폴더리스트
+import glob
+result = glob.glob("c:\\work\\*.py")
+print(result)
