@@ -49,4 +49,3 @@ f.close()
 
 for item in lst:
     print(item.replace("\n",""))
-
