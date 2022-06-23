@@ -5,11 +5,12 @@ from PyQt5 import uic
 import sqlite3
 import os.path 
 
+#CRID Create Read Update Delete
 #DB파일이 없으면 만들고 있다면 접속한다. 
 if os.path.exists("c:\\work\\ProductList.db"):
     con = sqlite3.connect("c:\\work\\ProductList.db")
     cur = con.cursor()
-else: 
+else: # 파일이 없다면 만들기
     con = sqlite3.connect("c:\\work\\ProductList.db")
     cur = con.cursor()
     cur.execute(

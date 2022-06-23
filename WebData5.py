@@ -29,8 +29,8 @@ class Form(QMainWindow):
         self.tableWidget.setRowCount(50)  #행의 갯수 
         self.tableWidget.setColumnCount(2)  #컬럼의 갯수 
         #컬럼의 폭을 지정한다. 0번 1번 
-        self.tableWidget.setColumnWidth(0, 300)
-        self.tableWidget.setColumnWidth(1, 300)
+        self.tableWidget.setColumnWidth(0, 500)
+        self.tableWidget.setColumnWidth(1, 200)
         
         #self.setTableWidgetData()
         self.tableWidget.doubleClicked.connect(self.doubleClicked)
@@ -39,7 +39,7 @@ class Form(QMainWindow):
         row = 0
         #User-Agent를 조작하는 경우 
         hdr = {'User-agent':'Mozila/5.0 (compatible; MSIE 5.5; Windows NT)'}
-        for n in range(0,5):
+        for n in range(0,5): #루프를 돌때마다 +1씩 증가하도록
             #클리앙의 중고장터 주소 
             data ='https://www.clien.net/service/board/sold?&od=T31&po=' + str(n)
             req = urllib.request.Request(data, 
@@ -75,7 +75,7 @@ class Form(QMainWindow):
 
     def doubleClicked(self):
         url = self.tableWidget.item(self.tableWidget.currentRow(), 1).text()
-        webbrowser.open(url) 
+        webbrowser.open(url) #새창 띄워주는 명령어
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
