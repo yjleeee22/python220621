@@ -1,4 +1,4 @@
-# DemoForm.py
+# DemoForm2.py
 # DemoForm.ui(디자인) + DemoForm.py(로직)
 import sys
 from PyQt5.QtWidgets import *
